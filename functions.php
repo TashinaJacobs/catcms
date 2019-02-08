@@ -44,6 +44,70 @@ add_action('init', 'add_custom_logo');
 // Custom logo support end
 
 
+register_default_headers( array(
+    'defaultImage' => array(
+        'url'           => get_template_directory_uri() . '/assets/images/default.jpg',
+        'thumbnail_url' => get_template_directory_uri() . '/assets/images/default.jpg',
+        'description'   => __( 'defaultImage', 'catcms' )
+    )
+) );
+$defaultImage = array(
+  'default-image'          => get_template_directory_uri() . '/assets/images/default.jpg',
+  'width'                  => 1280,
+  'height'                 => 600,
+    'header-text'            => false
+);
+add_theme_support( 'custom-header', $defaultImage );
+
+
+//Customizer
+function custom_theme_customizer($wp_customize) {
+  $wp_customize->add_section('front_page_section', array(
+    'title' => __('Front Page', 'catcms'),
+    'priority' => 20
+  ));
+
+  $wp_customize->add_setting('front_page_text', array(
+    'default' => 'Text here',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'front_page_text_control',
+      array (
+        'label' => __('Front Page Text', 'catcms'),
+        'section' => 'front_page_section',
+        'settings' => 'front_page_text',
+        'type' => 'text'
+      )
+      )
+  );
+
+  $wp_customize->add_setting('front_page_text_two', array(
+    'default' => 'Text here',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'front_page_text_control_two',
+      array (
+        'label' => __('Front Page Text Two', 'catcms'),
+        'section' => 'front_page_section',
+        'settings' => 'front_page_text_two',
+        'type' => 'text'
+      )
+      )
+  );
+}
+
+add_action('customize_register', 'custom_theme_customizer');
+
+
+
 // Include custom navwalker
 require_once('bs4navwalker.php');
 
