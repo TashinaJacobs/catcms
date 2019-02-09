@@ -1,6 +1,28 @@
+/* Whole page styles */
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  position: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Header  */
 .custom-background-img {
   background-size: cover;
   background-position: top;
   width: 100%;
   height: 450px;
+}
+
+/* Body */
+
+/* Footer */
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }

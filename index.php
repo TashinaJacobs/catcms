@@ -1,5 +1,12 @@
-<?php get_header(); ?>
-
-<h1>This is the index page</h1>
-
-<?php get_footer(); ?>
+<?php get_header();
+// Standard WP Post Loop
+  if( have_posts() ):
+    while( have_posts() ): the_post(); ?>
+      <div class="container">
+        <h1><?php the_title(); ?></h1>
+        <p><?php the_content(); ?></p>
+      </div>
+    <?php endwhile;
+  endif;
+  
+get_footer(); ?>
