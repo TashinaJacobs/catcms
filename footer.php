@@ -1,3 +1,10 @@
+      <!-- column closes -->
+        </div>
+    <!-- row closes -->
+      </div>
+  <!-- container closes -->
+    </div>
+    
     <footer class="footer">
       <?php
       // If custom footer text exists, put that here, otherwise show default

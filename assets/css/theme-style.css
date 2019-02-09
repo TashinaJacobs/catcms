@@ -19,10 +19,24 @@ body {
 }
 
 /* Body */
+.page-content {
+  text-align: center;
+  padding: 5%;
+}
 
+/* Front Page */
+.front-page-title {
+  padding-bottom: 7%;
+}
+
+/* Contact Page */
+.contact-form {
+  margin-bottom: 5%;
+}
 /* Footer */
 footer {
   width: 100%;
-  position: fixed;
+  padding: 2.5%;
   bottom: 0;
+  text-align: center;
 }

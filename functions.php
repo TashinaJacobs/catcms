@@ -56,8 +56,8 @@ function custom_theme_customizer($wp_customize) {
     'priority' => 20
   ));
 
-  // Body font colors
-  $wp_customize->add_setting('body_font_color_setting', array(
+  // Text colors
+  $wp_customize->add_setting('secondary_text_color_setting', array(
       'default' => '#000000',
       'transport' => 'refresh'
   ));
@@ -65,11 +65,11 @@ function custom_theme_customizer($wp_customize) {
   $wp_customize->add_control(
       new WP_Customize_Color_Control(
           $wp_customize,
-          'body_font_color_setting',
+          'secondary_text_color_setting',
           array(
-              'label' => __('Body Font Color', 'catcms'),
+              'label' => __('Secondary Text Color', 'catcms'),
               'section' => 'colors',
-              'settings' => 'body_font_color_setting'
+              'settings' => 'secondary_text_color_setting'
           )
       )
   );
@@ -112,7 +112,42 @@ function custom_theme_customizer($wp_customize) {
 
 
 
-  // Footer color
+  // Footer background color
+  $wp_customize->add_setting('footer_background_color_setting', array(
+      'default' => '#696665',
+      'transport' => 'refresh'
+  ));
+
+  $wp_customize->add_control(
+      new WP_Customize_Color_Control(
+          $wp_customize,
+          'footer_background_color_setting',
+          array(
+              'label' => __('Footer Background Color', 'catcms'),
+              'section' => 'colors',
+              'settings' => 'footer_background_color_setting'
+          )
+      )
+  );
+
+  // Footer text color
+  $wp_customize->add_setting('footer_text_color_setting', array(
+      'default' => '#ffffff',
+      'transport' => 'refresh'
+  ));
+
+  $wp_customize->add_control(
+      new WP_Customize_Color_Control(
+          $wp_customize,
+          'footer_text_color_setting',
+          array(
+              'label' => __('Footer Text Color', 'catcms'),
+              'section' => 'colors',
+              'settings' => 'footer_text_color_setting'
+          )
+      )
+  );
+
 
   // First landing page text input control
   $wp_customize->add_section('front_page_section', array(
@@ -182,7 +217,6 @@ function custom_theme_customizer($wp_customize) {
   );
 
 
-
 } // customize_function CLOSES
 add_action('customize_register', 'custom_theme_customizer');
 
@@ -193,11 +227,23 @@ function custom_theme_customizer_styles(){
     <style type="text/css">
     body, html {
       background-color: <?php echo get_theme_mod('background_color_setting', '#ffffff'); ?> !important;
-      color: <?php echo get_theme_mod('body_font_color_setting', '#000000'); ?> !important;
+    }
+
+    .primary-color {
+      color: <?php echo get_theme_mod('primary_text_color_setting', '#2ea9ac'); ?> !important;
+    }
+
+    .secondary-color {
+      color: <?php echo get_theme_mod('secondary_text_color_setting', '#000000'); ?> !important;
     }
 
     .navbar-nav {
       background-color: <?php echo get_theme_mod('background_color_setting', '#696665'); ?> !important;
+    }
+
+    footer {
+      background-color: <?php echo get_theme_mod('footer_background_color_setting', '#696665') ?> !important;
+      color: <?php echo get_theme_mod('footer_text_color_setting', '#ffffff'); ?> !important;
     }
     </style>
   <?php
@@ -217,3 +263,6 @@ require_once get_template_directory() . '/addons/bs4navwalker.php';
 
 // Register WordPress nav menu
 register_nav_menu('top', 'Top menu');
+
+// Disable WP editor in contact form
+add_filter( 'user_can_richedit' , '__return_false', 50 );

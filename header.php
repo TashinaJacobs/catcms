@@ -27,18 +27,18 @@
          <span class="navbar-toggler-icon"></span>
        </button>
        <?php
-       wp_nav_menu([
-         'menu'            => 'top',
-         'theme_location'  => 'top',
-         'container'       => 'div',
-         'container_id'    => 'bs4navbar',
-         'container_class' => 'collapse navbar-collapse',
-         'menu_id'         => false,
-         'menu_class'      => 'navbar-nav mr-auto',
-         'depth'           => 2,
-         'fallback_cb'     => 'bs4navwalker::fallback',
-         'walker'          => new bs4navwalker()
-       ]);
+         wp_nav_menu([
+           'menu'            => 'top',
+           'theme_location'  => 'top',
+           'container'       => 'div',
+           'container_id'    => 'bs4navbar',
+           'container_class' => 'collapse navbar-collapse',
+           'menu_id'         => false,
+           'menu_class'      => 'navbar-nav mr-auto',
+           'depth'           => 2,
+           'fallback_cb'     => 'bs4navwalker::fallback',
+           'walker'          => new bs4navwalker()
+         ]);
        ?>
     </nav>
 
@@ -56,3 +56,7 @@
 
     </div>
   <?php endif; ?>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
