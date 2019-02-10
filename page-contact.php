@@ -77,7 +77,7 @@ if($_POST){
                         'textarea_rows' => '10',
                         'teeny' => true,
                         'quicktags' => false);
-                    wp_editor($content, 'enquiriesMessage', $settings); ?>
+                    wp_editor($content, 'contactMessage', $settings); ?>
                 </div>
                 <div class="form-group">
                     <label for="">Email</label>
