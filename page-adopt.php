@@ -31,7 +31,7 @@
                <?php endif; ?>
              <div class="card-body">
                <h5 class="card-title"><?php the_title(); ?></h5>
-               <p><?php the_content(); ?></p>
+
                <?php
                   $id = get_the_id();
                   $cat = get_post_meta($id, 'cat', true);

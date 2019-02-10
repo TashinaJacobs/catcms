@@ -27,7 +27,7 @@ if($_POST){
             $args = array(
                 'post_title' => $_POST['contactName'],
                 'post_content' => $_POST['contactMessage'],
-                'post_type' => 'contact',
+                'post_type' => 'enquiries',
                 'meta_input' => array(
                     'email' => $_POST['contactEmail'],
                 )

@@ -23,7 +23,7 @@ function add_cats_post_type(){
         'supports' => array(
             'title',
             'editor',
-            'thumbnail'
+            'thumbnail',
         ),
         'query_var' => true
     );
