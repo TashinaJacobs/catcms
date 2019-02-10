@@ -70,7 +70,7 @@ if($_POST){
                     <input type="text" name="contactName" class="form-control" value="">
                 </div>
                 <div class="form-group">
-                    <label for="">Message</label>
+                    <label for="">Message (include cat you are interested in)</label>
                     <?php
                     $settings = array(
                         'media_buttons' => false,

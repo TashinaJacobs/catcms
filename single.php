@@ -14,6 +14,7 @@ get_header(); ?>
                 <p><?php the_content(); ?></p>
             </div>
 
+<!-- Button linking to contact page will go here - dynamic link? -->
 
         <?php endwhile; ?>
     <?php endif; ?>
