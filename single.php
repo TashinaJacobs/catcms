@@ -1,20 +1,17 @@
+
 <?php
-  // /* Template Name: Adopt
- ?>
-<?php get_header(); ?>
+get_header(); ?>
+<h3>This is a single cat</h3>
     <?php if(have_posts()): ?>
         <?php while(have_posts()): the_post();?>
 
-            <?php get_template_part('content', get_post_format()); ?>
+            <!-- <?php get_template_part('content', get_post_format()); ?> -->
 
             <?php if( has_post_thumbnail() ): ?>
-                <?php  $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-                echo '<div class="bg-img" style="background: url('. $url.')"></div>'; ?>
+              <?php the_post_thumbnail('thumbnail'); ?>
             <?php endif; ?>
-            <div class="container">
-            <div class="text-center mb-5 mt-5">
-                <h3 class="subheader mb-3"><?php the_title(); ?></h3>
-                <h6 class="body"><?php the_content(); ?></h6>
+                <h3><?php the_title(); ?></h3>
+                <p><?php the_content(); ?></p>
             </div>
 
 

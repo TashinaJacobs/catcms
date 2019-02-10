@@ -5,7 +5,7 @@ function add_cats_post_type(){
 
     $labels = array(
         'name' => _x('Cats', 'post type name', 'catcms'),
-        'singular_name' => _x('Cats', 'post types singular name', 'catcms'),
+        'singular_name' => _x('Cat', 'post types singular name', 'catcms'),
         'add_new_item' => _x('Add New Cat', 'adding new cat', 'catcms')
     );
 

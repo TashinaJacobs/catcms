@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Adopt Page template */
+/* Template Name: Adopt Page */
  ?>
 
 <?php get_header(); ?>
@@ -30,8 +30,20 @@
                    <?php the_post_thumbnail('thumbnail', ['class'=>'card-img-top img-fluid', 'alt'=>'Card image cap']); ?>
                <?php endif; ?>
              <div class="card-body">
-               <h5 class="card-title"><?php the_title(); ?></h5>
+               
+               <!-- Create link to post -->
+               <h5 class="card-title">
+                 <a href="<?php echo get_permalink($id) ?>">
+                   <?php the_title(); ?>
+                 </a>
+                 </h5>
 
+               <!-- Show excerpt - if no excerpt, show content -->
+               <?php if( has_excerpt() ): ?>
+                 <p><?php the_excerpt(); ?></p>
+               <?php else: ?>
+                  <p><?php the_content(); ?></p>
+                <?php endif; ?>
                <?php
                   $id = get_the_id();
                   $cat = get_post_meta($id, 'cat', true);
