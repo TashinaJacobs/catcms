@@ -19,11 +19,13 @@ function add_cats_post_type(){
         'show_in_menu' => true,
         'show_in_nav_menus' => false,
         'menu_position' => 20,
+        'has_archive' => false,
         'menu_icon' => 'dashicons-groups',
         'supports' => array(
             'title',
             'editor',
             'thumbnail',
+            'excerpt'
         ),
         'query_var' => true
     );

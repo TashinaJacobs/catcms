@@ -33,6 +33,32 @@ body {
 .contact-form {
   margin-bottom: 5%;
 }
+
+/* Adopt Page */
+
+.cat-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.cat-card {
+  width: 60%;
+  margin: 2em;
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 600px) {
+  .cat-container {
+    grid-template-columns: auto;
+  }
+
+  .cat-card {
+    width: 80%;
+  }
+}
+
 /* Footer */
 footer {
   width: 100%;
