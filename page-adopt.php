@@ -6,8 +6,10 @@
 
 <?php if(have_posts()): ?>
   <?php while(have_posts()): the_post();?>
-    <h1><?php the_title(); ?></h1>
-    <div class="wp_content">
+    <div class="page-title">
+      <h1><?php the_title(); ?></h1>
+    </div>
+    <div class="page-content">
         <?php the_content(); ?>
     </div>
 

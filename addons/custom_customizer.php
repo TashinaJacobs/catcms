@@ -204,6 +204,10 @@ function custom_theme_customizer_styles(){
       background-color: <?php echo get_theme_mod('background_color_setting', '#ffffff'); ?> !important;
     }
 
+    .page-title {
+      border-bottom: solid 5px <?php echo get_theme_mod('footer_background_color_setting', '#696665'); ?> !important;
+    }
+    
     .primary-color {
       color: <?php echo get_theme_mod('primary_text_color_setting', '#2ea9ac'); ?> !important;
     }

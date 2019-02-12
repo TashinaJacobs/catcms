@@ -50,6 +50,13 @@ $defaultImage = array(
 );
 add_theme_support( 'custom-header', $defaultImage );
 
+// Include WooCommerce
+function customtheme_add_woocommerce_support()
+ {
+add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'customtheme_add_woocommerce_support' );
+
 // Include custom post types
 require get_parent_theme_file_path('./addons/custom_post_types.php');
 
