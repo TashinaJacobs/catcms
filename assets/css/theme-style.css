@@ -78,3 +78,15 @@ footer {
   bottom: 0;
   text-align: center;
 }
+
+.cat-image-container {
+  margin-top: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+.product {
+  margin-top: 30px;
+}

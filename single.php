@@ -3,7 +3,7 @@
   <?php if (have_posts()): ?>
     <?php while ( have_posts()): the_post(); ?>
 
-      <div class="page-title">
+      <div class="page-title primary-color">
         <h1><?php the_title(); ?></h1>
       </div>
         <div class="cat-image-container">
@@ -20,6 +20,12 @@
 
         <div class="cat-description-container">
           <p><?php the_content(); ?></p>
+        </div>
+
+
+        <!-- Need to get button working and going to the contact page, it currently goes to the index.php by the looks of it. -->
+        <div class="form-group">
+          <a href="<?php echo get_permalink('http://192.168.33.10/cms/awesome/wordpress/index.php/contact/') ?>">Contact<input  type="submit" name="" value="Contact Us About This Cat" class="btn button"></a>
         </div>
 
     <?php endwhile; ?>
