@@ -28,8 +28,6 @@ body {
   }
 }
 
-/* Look up styling hrs */
-
 /* Body */
 .page-content {
   text-align: center;
@@ -58,9 +56,6 @@ body {
   margin: 2em;
 }
 
-@media (max-width: 900px) {
-}
-
 @media (max-width: 600px) {
   .cat-container {
     grid-template-columns: auto;
@@ -69,6 +64,16 @@ body {
   .cat-card {
     width: 80%;
   }
+}
+
+/* Donate page */
+.donate-intro {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.donate-content {
+  font-size: 20px;
 }
 
 /* Footer */

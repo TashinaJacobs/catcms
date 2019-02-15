@@ -69,7 +69,7 @@ function custom_theme_customizer($wp_customize) {
 
   // Header color
   $wp_customize->add_setting('header_navbar_color_setting', array(
-      'default' => '#696665',
+      'default' => '#ffffff',
       'transport' => 'refresh'
   ));
 
@@ -207,7 +207,7 @@ function custom_theme_customizer_styles(){
     .page-title {
       border-bottom: solid 5px <?php echo get_theme_mod('footer_background_color_setting', '#696665'); ?> !important;
     }
-    
+
     .primary-color {
       color: <?php echo get_theme_mod('primary_text_color_setting', '#2ea9ac'); ?> !important;
     }
@@ -217,7 +217,7 @@ function custom_theme_customizer_styles(){
     }
 
     .navbar-nav {
-      background-color: <?php echo get_theme_mod('background_color_setting', '#696665'); ?> !important;
+      background-color: <?php echo get_theme_mod('header_navbar_color_setting', '#ffffff'); ?> !important;
     }
 
     footer {

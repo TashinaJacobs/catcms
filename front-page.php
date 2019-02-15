@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+/* Template Name: Home Page */
+get_header(); ?>
 
 <div class="page-content">
   <div class="front-page-title primary-color">

@@ -61,3 +61,35 @@ function add_enquiries_post_type(){
     register_post_type('enquiries', $args);
 }
 add_action('init', 'add_enquiries_post_type');
+
+// Donate post type
+function add_donate_post_type(){
+
+    $labels = array(
+        'name' => _x('Donate', 'post type name', 'catcms'),
+        'singular_name' => _x('Donate', 'post types singular name', 'catcms'),
+        'add_new_item' => _x('Add New Donation Info', 'adding new cat', 'catcms')
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'description' => 'A post type for donation info',
+        'public' => true,
+        'hierarchical' => true,
+        'exclude_from_search' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => false,
+        'menu_position' => 40,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-groups',
+        'supports' => array(
+            'title',
+            'editor',
+        ),
+        'query_var' => true
+    );
+
+    register_post_type('donate', $args);
+}
+add_action('init', 'add_donate_post_type');
